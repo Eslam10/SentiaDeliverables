@@ -10,7 +10,7 @@ $webFileLocations = Invoke-WebRequest https://raw.githubusercontent.com/Eslam10/
 $FileLocations    = ConvertFrom-StringData -StringData $webFileLocations.Content
 
 ##Deploy on this subscription
-Get-AzureRmSubscription –SubscriptionName $FileLocations['SubscriptionName'] | Select-AzureRmSubscription 
+Get-AzureRmSubscription â€“SubscriptionName $FileLocations['SubscriptionName'] | Select-AzureRmSubscription 
 
 echo "############################################Create Resource Group############################################"
 $webRGParameters  = Invoke-WebRequest $FileLocations['RGParametersFileLocation']
@@ -80,11 +80,11 @@ $Body_3 =  Get-Content  C:\Body_PA.json;
 $URLPA  = "https://management.azure.com/%2Fsubscriptions%2F$SubID%2FresourceGroups%2F$RG_Name/providers/Microsoft.Authorization/policyAssignments/SentiaPA?api-version=2018-03-01"
 
 $invokeRestPA = @{
-  Uri = $URLPA
-  Method = 'Put'
+  Uri         = $URLPA
+  Method      = 'Put'
   ContentType = 'application/json'
-  Headers = $authHeader
-  Body    = $Body_3
+  Headers     = $authHeader
+  Body        = $Body_3
  }
 
 # Invoke the REST API
