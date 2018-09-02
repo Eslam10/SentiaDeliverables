@@ -93,3 +93,6 @@ $responsePA = Invoke-RestMethod @invokeRestPA;
 $Resp_PA_id = $responsePA.id;
 
 echo 'Policy Assignment ID: ' $Resp_PA_id;
+
+#Remove temp file created
+Remove-Item C:\Body_PA.json;
