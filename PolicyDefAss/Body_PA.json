@@ -1,0 +1,5 @@
+{
+  "properties": 
+  {
+    "displayName": "SentiaPA",
+    "description": "This policy is to restrict the resourcetypes to only allow: compute, network and storage resourcetypes",

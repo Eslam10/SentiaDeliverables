@@ -1,0 +1,30 @@
+{
+  "properties": {
+    "displayName": "SentiaPD",
+    "policyType": "Custom",
+    "description": "This policy is to restrict the resourcetypes to only allow: compute, network and storage resourcetypes",
+    "policyRule": {
+    "if": {
+      "not": {
+        "anyOf": [
+          {
+            "field": "type",
+            "like": "Microsoft.Compute/*"
+          },
+          {
+            "field": "type",
+            "like": "Microsoft.Network/*"
+          },
+          {
+            "field": "type",
+            "like": "Microsoft.Storage/*"
+          }
+        ]
+      }
+    },
+      "then": {
+        "effect": "deny"
+      }
+    }
+  }
+ }

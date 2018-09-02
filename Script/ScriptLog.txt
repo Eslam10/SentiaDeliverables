@@ -1,0 +1,98 @@
+Name             : Free Trial (98c0bab3-5aa6-4e80-a54b-2a3b2583a13a) - eslamsayedattiama@gmail.com
+Account          : eslamsayedattiama@gmail.com
+SubscriptionName : Free Trial
+TenantId         : 9eba520f-f1ae-477d-ad1f-96e347c4f653
+Environment      : AzureCloud
+
+############################################Create Resource Group############################################
+
+ResourceGroupName : SentiaRG
+Location          : westeurope
+ProvisioningState : Succeeded
+Tags              : {Environment, Company}
+TagsTable         : 
+                    Name         Value 
+                    ===========  ======
+                    Environment  Test  
+                    Company      Sentia
+                    
+ResourceId        : /subscriptions/98c0bab3-5aa6-4e80-a54b-2a3b2583a13a/resourceGroups/SentiaRG
+
+Resource Group Name: 
+SentiaRG
+############################################Create Storage Account############################################
+
+ResourceGroupName       : SentiaRG
+DeploymentName          : template
+CorrelationId           : f784af56-8f77-42c2-8feb-0fa49e5d444d
+ProvisioningState       : Succeeded
+Timestamp               : 9/2/2018 9:30:50 PM
+Mode                    : Incremental
+TemplateLink            : Microsoft.Azure.Management.ResourceManager.Models.TemplateLink
+TemplateLinkString      : 
+                          Uri            : https://raw.githubusercontent.com/Eslam10/SentiaDeliverables/master/SAParam/template.json
+                          ContentVersion : 1.0.0.0
+                          
+DeploymentDebugLogLevel : 
+Parameters              : {[storageAccountType, Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.DeploymentVariable], [sAprefix, 
+                          Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.DeploymentVariable], [location, 
+                          Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.DeploymentVariable]}
+ParametersString        : 
+                          Name             Type                       Value     
+                          ===============  =========================  ==========
+                          storageAccountType  String                     Standard_GRS
+                          sAprefix         String                     sentia    
+                          location         String                     westeurope
+                          
+Outputs                 : {[storageAccountName, Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.DeploymentVariable]}
+OutputsString           : 
+                          Name             Type                       Value     
+                          ===============  =========================  ==========
+                          storageAccountName  String                     sentiadhxlxeg4wsbcc
+                          
+
+############################################Create Virtual Network/Subnets############################################
+
+ResourceGroupName       : SentiaRG
+DeploymentName          : template
+CorrelationId           : 8ba291b1-1a81-4692-b85c-cb583352b4e1
+ProvisioningState       : Succeeded
+Timestamp               : 9/2/2018 9:31:04 PM
+Mode                    : Incremental
+TemplateLink            : Microsoft.Azure.Management.ResourceManager.Models.TemplateLink
+TemplateLinkString      : 
+                          Uri            : https://raw.githubusercontent.com/Eslam10/SentiaDeliverables/master/VNwk/template.json
+                          ContentVersion : 1.0.0.0
+                          
+DeploymentDebugLogLevel : 
+Parameters              : {[vnkName, Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.DeploymentVariable], [location, 
+                          Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.DeploymentVariable], [addressPrefix, 
+                          Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.DeploymentVariable], [subnet1Name, 
+                          Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.DeploymentVariable]...}
+ParametersString        : 
+                          Name             Type                       Value     
+                          ===============  =========================  ==========
+                          vnkName          String                     SentiaVNK 
+                          location         String                     westeurope
+                          addressPrefix    String                     172.16.0.0/12
+                          subnet1Name      String                     subnet1   
+                          subnet1AddressPrefix  String                     172.16.0.0/24
+                          subnet2Name      String                     subnet2   
+                          subnet2AddressPrefix  String                     172.16.1.0/24
+                          subnet3Name      String                     subnet3   
+                          subnet3AddressPrefix  String                     172.16.2.0/24
+                          enableDdosProtection  Bool                       False     
+                          
+Outputs                 : {[vnName, Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.DeploymentVariable]}
+OutputsString           : 
+                          Name             Type                       Value     
+                          ===============  =========================  ==========
+                          vnName           String                     SentiaVNK 
+                          
+
+######################Create Policy Defenition with REST API######################
+Policy Defenition ID: 
+/subscriptions/98c0bab3-5aa6-4e80-a54b-2a3b2583a13a/providers/Microsoft.Authorization/policyDefinitions/SentiaPD
+############################################Create Policy Assignment with REST API############################################
+Policy Assignment ID: 
+/subscriptions/98c0bab3-5aa6-4e80-a54b-2a3b2583a13a/resourceGroups/SentiaRG/providers/Microsoft.Authorization/policyAssignments/SentiaPA

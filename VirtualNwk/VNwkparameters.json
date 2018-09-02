@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "VNKName": {
+            "value": "SentiaVNWK"
+        },
+        "addressPrefix": {
+            "value": "172.16.0.0/12"
+        },
+        "subnet1Name": {
+            "value": "subnet1"
+        },
+        "subnet1AddressPrefix": {
+            "value": "172.16.0.0/24"
+        },
+        "subnet2Name": {
+            "value": "subnet2"
+        },
+        "subnet2AddressPrefix": {
+            "value": "172.16.1.0/24"
+        },
+        "subnet3Name": {
+            "value": "subnet3"
+        },
+        "subnet3AddressPrefix": {
+            "value": "172.16.2.0/24"
+        },
+        "enableDdosProtection": {
+            "value": false
+        }
+    }
+}

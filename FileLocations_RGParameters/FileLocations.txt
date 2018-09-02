@@ -1,0 +1,9 @@
+SubscriptionName         = Free Trial
+RGParametersFileLocation = https://raw.githubusercontent.com/Eslam10/SentiaDeliverables/master/FileLocations_RGParameters/RGParameters.txt
+RGTagFileLocation     	 = https://raw.githubusercontent.com/Eslam10/SentiaDeliverables/master/FileLocations_RGParameters/RGTag.txt
+SAtemplate               = https://raw.githubusercontent.com/Eslam10/SentiaDeliverables/master/StorageAccount/SAtemplate.json
+SAparameters             = https://raw.githubusercontent.com/Eslam10/SentiaDeliverables/master/StorageAccount/SAparameters.json
+VNwktemplate             = https://raw.githubusercontent.com/Eslam10/SentiaDeliverables/master/VirtualNwk/VNwktemplate.json
+VNwkparameter            = https://raw.githubusercontent.com/Eslam10/SentiaDeliverables/master/VirtualNwk/VNwkparameters.json
+PolicyDefBody			 = https://raw.githubusercontent.com/Eslam10/SentiaDeliverables/master/PolicyDefAss/Body_PD.json
+PolicyAssBody            = https://raw.githubusercontent.com/Eslam10/SentiaDeliverables/master/PolicyDefAss/Body_PA.json
